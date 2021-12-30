@@ -1,0 +1,36 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "browser": true,
+    "es2021": true
+    // "cypress/globals": true
+    // "serviceworker": true,
+    // "mongo": true,
+    // "jest": true
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "extraFileExtensions": [".json"],
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 6, // if changed also update `target` in tsconfig.json
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint"],
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking", // this is slow, we might need to separate it
+    "prettier"
+  ],
+  "rules": {
+    "no-console": ["error", { "allow": ["info", "warn", "error"] }]
+    // "no-use-before-define": "off", // it is suggested to disable the base rule as it can report incorrect errors
+    // "react/require-default-props": "off", // requires default props for all optional properties...
+    // "react/jsx-props-no-spreading": "off" // when extending components from mui it's simpler to pass all props with spread
+  }
+}
