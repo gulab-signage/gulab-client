@@ -1,0 +1,18 @@
+{
+  "name": "gulab-client",
+  "version": "1.0.0",
+  "description": "Monorepo for the Gulab Signange client side products",
+  "main": "none",
+  "repository": "https://github.com/gulab-signage/gulab-client.git",
+  "author": "Mitko Miloshev <miloshev.mitko@gmail.com>",
+  "license": "GNU v3",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "core/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "4.0.0"
+  }
+}
