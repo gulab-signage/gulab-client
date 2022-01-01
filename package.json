@@ -8,9 +8,9 @@
   "license": "GNU v3",
   "private": true,
   "workspaces": [
-    "apps/*",
     "core/*",
-    "packages/*"
+    "packages/*",
+    "apps/*"
   ],
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "5.8.1",
