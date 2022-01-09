@@ -5,7 +5,7 @@
   "repository": "https://github.com/gulab-signage/gulab-client.git",
   "author": "Mitko Miloshev <miloshev.mitko@gmail.com>",
   "homepage": "https://github.com/gulab-signage/gulab-client/tree/develop/core/utils#readme",
-  "license": "GNU",
+  "license": "GNUv3",
   "private": true,
   "scripts": {
     "build": "cross-env NODE_ENV=production yarn webpack --env goal=local --config ../webpack.config.js",
