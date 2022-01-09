@@ -1,6 +1,6 @@
 {
   "name": "@gulab-client/utils",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Common methods for data manipulation",
   "repository": "https://github.com/gulab-signage/gulab-client.git",
   "author": "Mitko Miloshev <miloshev.mitko@gmail.com>",
