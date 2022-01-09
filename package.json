@@ -13,7 +13,8 @@
     "apps/*"
   ],
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lerna-version": "lerna version --conventional-commits -m \"chore(release): publish\""
   },
   "devDependencies": {
     "@babel/core": "7.16.7",
