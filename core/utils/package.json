@@ -1,0 +1,19 @@
+{
+  "name": "@gulab-client/utils",
+  "version": "0.0.1",
+  "description": "Common methods for data manipulation",
+  "repository": "https://github.com/gulab-signage/gulab-client.git",
+  "author": "Mitko Miloshev <miloshev.mitko@gmail.com>",
+  "homepage": "https://github.com/gulab-signage/gulab-client#readme",
+  "license": "ISC",
+  "private": true,
+  "scripts": {
+    "build": "cross-env NODE_ENV=production yarn webpack --env goal=local --config ../webpack.config.js",
+    "start": "yarn webpack serve --config ../webpack.config.js",
+    "watch": "yarn webpack --config ../webpack.config.js --watch",
+    "test": "yarn jest --config=../../jest.config.js"
+  },
+  "dependencies": {
+    "nested-property": "4.0.0"
+  }
+}

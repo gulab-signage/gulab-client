@@ -1,10 +1,10 @@
 {
-  "name": "gulab-client",
+  "name": "@gulab-client/root",
   "version": "1.0.0",
   "description": "Monorepo for the Gulab Signange client side products",
-  "main": "none",
   "repository": "https://github.com/gulab-signage/gulab-client.git",
   "author": "Mitko Miloshev <miloshev.mitko@gmail.com>",
+  "homepage": "https://github.com/gulab-signage/gulab-client#readme",
   "license": "GNU v3",
   "private": true,
   "workspaces": [
@@ -12,9 +12,21 @@
     "packages/*",
     "apps/*"
   ],
+  "scripts": {
+    "prepare": "husky install"
+  },
   "devDependencies": {
+    "@babel/core": "7.16.7",
+    "@babel/preset-env": "7.16.7",
+    "@babel/preset-typescript": "7.16.7",
+    "@types/graceful-fs": "4.1.5",
+    "@types/jest": "27.4.0",
+    "@types/node": "17.0.6",
     "@typescript-eslint/eslint-plugin": "5.8.1",
     "@typescript-eslint/parser": "5.8.1",
+    "babel-jest": "27.4.6",
+    "babel-loader": "8.2.3",
+    "cross-env": "7.0.3",
     "eslint": "8.5.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-airbnb-typescript": "16.1.0",
@@ -24,12 +36,16 @@
     "eslint-plugin-react": "7.28.0",
     "eslint-plugin-react-hooks": "4.3.0",
     "husky": "7.0.0",
+    "jest": "27.4.7",
     "lerna": "4.0.0",
     "lint-staged": "12.1.4",
     "prettier": "2.5.1",
-    "typescript": "4.5.4"
-  },
-  "scripts": {
-    "prepare": "husky install"
+    "prettier-plugin-organize-imports": "2.3.4",
+    "source-map-loader": "3.0.1",
+    "ts-jest": "27.1.2",
+    "typescript": "4.5.4",
+    "webpack": "5.65.0",
+    "webpack-cli": "4.9.1",
+    "webpack-dev-server": "4.7.2"
   }
 }
