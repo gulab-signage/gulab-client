@@ -8,7 +8,8 @@ jspm_packages/
 build/
 dist/
 
-# coverage
+# tests and coverage
+*.test.ts
 coverage/
 .nyc_output
 
@@ -33,6 +34,10 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+
+# configs
+jest.config.js
+webpack.*.js
 
 /.npmrc
 *.json
