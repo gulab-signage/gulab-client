@@ -4,7 +4,7 @@
   "description": "Common methods for data manipulation",
   "repository": "https://github.com/gulab-signage/gulab-client.git",
   "author": "Mitko Miloshev <miloshev.mitko@gmail.com>",
-  "homepage": "https://github.com/gulab-signage/gulab-client#readme",
+  "homepage": "https://github.com/gulab-signage/gulab-client/tree/develop/core/utils#readme",
   "license": "ISC",
   "private": true,
   "scripts": {
