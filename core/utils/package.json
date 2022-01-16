@@ -7,11 +7,10 @@
   "homepage": "https://github.com/gulab-signage/gulab-client/tree/develop/core/utils#readme",
   "license": "GNU",
   "private": true,
+  "main": "src/index.ts",
   "scripts": {
     "build": "cross-env NODE_ENV=production yarn webpack --env goal=local --config ../webpack.config.js",
-    "start": "yarn webpack serve --config ../webpack.config.js",
-    "watch": "yarn webpack --config ../webpack.config.js --watch",
-    "test": "yarn jest --config=../../jest.config.js"
+    "test": "yarn jest --config=../jest.config.js"
   },
   "dependencies": {
     "nested-property": "4.0.0"
