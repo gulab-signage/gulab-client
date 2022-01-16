@@ -4,4 +4,4 @@
 # Don't know how to check that this is running only on staged files. Something that might be usefull:
 # lerna run --concurrency 1 --stream precommit --since HEAD --exclude-dependents
 
-npx lint-staged
+yarn lint-staged
