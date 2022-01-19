@@ -1,6 +1,6 @@
 {
   "name": "@gulab-client/models",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Common place for models and module declarations",
   "author": "Mitko Miloshev <miloshev.mitko@gmail.com>",
   "repository": "https://github.com/gulab-signage/gulab-client.git",
