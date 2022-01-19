@@ -1,17 +1,20 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
-# dependencies
-node_modules/
-jspm_packages/
-
 # compiled output
 build/
 dist/
 
-# tests and coverage
-*.test.ts
-coverage/
-.nyc_output
+# configs
+jest.*.js
+webpack.*.js
+
+# dependencies
+node_modules/
+jspm_packages/
+
+# environment variables file
+.env
+.env.*
 
 # IDEs and editors
 .vscode
@@ -27,17 +30,11 @@ yarn-error.log*
 
 # npm cache directory
 .npm
-
-# environment variables file
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# configs
-jest.*.js
-webpack.*.js
-
 /.npmrc
+
+# tests and coverage
+*.test.ts
+coverage/
+.nyc_output
+
 *.json
