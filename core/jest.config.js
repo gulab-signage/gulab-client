@@ -1,3 +1,5 @@
+const paths = require('./webpack.paths');
+
 console.log(
   '\x1b[36m%s\x1b[0m',
   `${process.env.npm_package_name}: Using jest.config in "${process.env.NODE_ENV}" mode`
@@ -21,12 +23,12 @@ module.exports = {
   collectCoverage: true,
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
-  collectCoverageFrom: [
-    '**/src/**/*.{ts,tsx}',
-    '!**/node_modules/**',
-    '!**/src/**/index.{ts,tsx}',
-    '!./utils/src/mix/scroll.ts',
-  ],
+  // collectCoverageFrom: [
+  //   '**/src/**/*.{ts,tsx}',
+  //   '!**/node_modules/**',
+  //   '!**/src/**/index.{ts,tsx}',
+  //   '!./utils/src/mix/scroll.ts',
+  // ],
 
   // The directory where Jest should output its coverage files
   coverageDirectory: 'coverage',
@@ -120,7 +122,7 @@ module.exports = {
   // restoreMocks: false,
 
   // The root directory that Jest should scan for tests and modules within
-  // rootDir: undefined,
+  rootDir: paths.appSrc,
 
   // A list of paths to directories that Jest should use to search for files in
   // roots: [
