@@ -1,0 +1,24 @@
+{
+  "name": "@gulab-client/http-client",
+  "version": "1.0.0",
+  "description": "HTTP Client with common defaults created using Axios",
+  "author": "Mitko Miloshev <miloshev.mitko@gmail.com>",
+  "repository": "https://github.com/gulab-signage/gulab-client.git",
+  "homepage": "https://github.com/gulab-signage/gulab-client/tree/main/core/logger#readme",
+  "license": "GPL-3.0-or-later",
+  "private": true,
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production yarn webpack --env goal=local --config ../webpack.config.js",
+    "test": "yarn jest --config=../jest.config.js"
+  },
+  "devDependencies": {
+    "@types/qs": "6.9.7"
+  },
+  "dependencies": {
+    "@gulab-client/utils": "^1.2.1",
+    "axios": "0.25.0",
+    "qs": "6.10.3",
+    "urlpattern-polyfill": "1.0.0-rc2"
+  }
+}
