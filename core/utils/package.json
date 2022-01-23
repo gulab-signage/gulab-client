@@ -13,6 +13,7 @@
     "test": "yarn jest --config=../jest.config.js"
   },
   "dependencies": {
+    "@gulab-client/logger": "^1.1.0",
     "nested-property": "4.0.0"
   }
 }

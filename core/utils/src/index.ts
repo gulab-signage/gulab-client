@@ -1,7 +1,10 @@
 export { default as insertAtIndex } from './array/immutability/insertAtIndex';
 export { default as pop } from './array/immutability/pop';
 export { default as removeAtIndex } from './array/immutability/removeAtIndex';
+export { default as replaceAtIndex } from './array/immutability/replaceAtIndex';
 export { default as shift } from './array/immutability/shift';
+export { default as updateAtIndex } from './array/immutability/updateAtIndex';
+export { default as LocalStorage } from './localStorage';
 export { disableScroll, enableScroll } from './mix/scroll';
 export { default as removeValues } from './object/removeValues';
 export { default as capitalizeEachWord } from './string/capitalizeEachWord';
