@@ -9,6 +9,7 @@
   "private": "true",
   "main": "src/index.ts",
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "build": "cross-env NODE_ENV=production yarn webpack --env goal=local --config ../webpack.config.js",
+    "test": "yarn jest --config=../jest.config.js"
   }
 }
