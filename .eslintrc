@@ -31,12 +31,13 @@
     "no-console": ["error", { "allow": ["info", "warn", "error"] }],
     // It reports error when trying to use the package name for absolute import.
     // Example, importing '@gulab-client/utils/src/object/removeValues' in 'core\utils\src\string\capitalizeEachWord.ts'.
-    "import/no-extraneous-dependencies": ["off"]
+    "import/no-extraneous-dependencies": ["off"],
     // Problem occurs when aliased paths for absolute imports
     // https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/rules/imports.js#L139
     // "import/extensions": ["error", "ignorePackages", { "ts": "never", "tsx": "never" }],
     // "no-use-before-define": "off", // it is suggested to disable the base rule as it can report incorrect errors
     // "react/require-default-props": "off", // requires default props for all optional properties...
     // "react/jsx-props-no-spreading": "off" // when extending components from mui it's simpler to pass all props with spread
+    "react/jsx-no-bind": ["error", { "allowFunctions": true }]
   }
 }

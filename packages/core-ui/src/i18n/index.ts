@@ -2,6 +2,26 @@ import { Logger } from '@gulab-client/logger';
 import i18next from 'i18next';
 import { initReactI18next, useTranslation } from 'react-i18next';
 
+/**
+ *
+ * ### Using the hook
+ * import { useTranslation } from 'react-i18next';\
+ * import { useTranslation } from '@gulab-client/core-ui';\
+ * const { t, i18n } = useTranslation();
+ *
+ * ### Using outside of React
+ * import i18next from 'i18next';\
+ * import i18next from '@gulab-client/core-ui';\
+ * i18next.t('my.key');
+ *
+ * ### Addint resources
+ * i18next.addResourceBundle('en', 'namespace1', { key: 'hello' });
+ *
+ * ### Using namespaces and prefix
+ * const { t } = useTranslation('namespace1', { keyPrefix: 'copy' });\
+ * i18next.t('look.deep', { ns: 'namespace1' });
+ */
+
 export function initI18n() {
   i18next
     // passes i18n down to react-i18next
@@ -22,31 +42,3 @@ export function initI18n() {
 }
 
 export { i18next, useTranslation };
-
-// ## Example React
-// import './i18n';
-// import App from './App';
-// ReactDOM.render(
-//   <App />,
-//   document.getElementById("root")
-// );
-
-// ## Example outside of React
-// import i18next from './i18n'
-// i18next.t('my.key')
-
-// ## Example hook
-// import { useTranslation } from 'react-i18next';
-// function MyComponent () {
-//   const { t, i18n } = useTranslation();
-//   return <h1>{t('Welcome to React')}</h1>
-// }
-
-// ## Example, namespaces
-// i18next.t('look.deep', { ns: 'common' })
-// const { t } = useTranslation(['translation', 'common']);
-
-// ## Adding resources
-// i18next.addResourceBundle('en', 'namespace1', {
-//   key: 'hello from namespace 1'
-// });

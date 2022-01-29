@@ -1,0 +1,9 @@
+{
+  "common": {
+    "copy": {
+      "default": "Click to copy {{value}}.",
+      "error": "Sorry, there was an error.",
+      "success": "Copied!"
+    }
+  }
+}
