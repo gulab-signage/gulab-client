@@ -15,7 +15,9 @@
   "scripts": {
     "prepare": "husky install",
     "lerna-version": "lerna version --conventional-commits -m \"chore(release): publish\"",
-    "test": "lerna run --stream test"
+    "test": "lerna run --stream test",
+    "storybook": "yarn workspace @gulab-client/core-ui storybook",
+    "build-storybook": "yarn workspace @gulab-client/core-ui build-storybook"
   },
   "devDependencies": {
     "@babel/core": "7.16.7",
