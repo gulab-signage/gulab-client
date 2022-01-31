@@ -1,2 +1,2 @@
-export { default as themeDark } from './dark';
-export { default as themeLight } from './default';
+export { default as ThemeControl } from './ThemeControl';
+export { default as ThemeProvider } from './ThemeProvider';

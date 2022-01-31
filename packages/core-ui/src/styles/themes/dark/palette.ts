@@ -1,7 +1,7 @@
 import type { PaletteOptions } from '@mui/material/styles/createPalette';
 
 const palette: PaletteOptions = {
-  mode: 'dark',
+  mode: 'light',
   primary: {
     main: '#331832',
   },

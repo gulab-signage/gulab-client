@@ -3,6 +3,7 @@ import palette from './palette';
 import typography from './typography';
 
 export default createTheme({
+  name: 'default',
   palette,
   typography,
 });
