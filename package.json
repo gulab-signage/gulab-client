@@ -8,9 +8,9 @@
   "license": "GPL-3.0-or-later",
   "private": true,
   "workspaces": [
-    "core/*",
-    "packages/*",
-    "apps/*"
+    "core/**/*",
+    "packages/**/*",
+    "apps/**/*"
   ],
   "scripts": {
     "prepare": "husky install",
