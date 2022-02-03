@@ -2,8 +2,11 @@ import styled from '@emotion/styled';
 import { useTranslation } from '@gulab-client/core-ui';
 import { Logger } from '@gulab-client/logger';
 import Tooltip from '@mui/material/Tooltip';
-import React, { PropsWithChildren, useMemo, useState } from 'react';
-import copyTextToClipboard from './copyTextToClipboard';
+import PropTypes from 'prop-types';
+import type { PropsWithChildren } from 'react';
+import React, { useMemo, useRef, useState } from 'react';
+import copyTextToClipboard from './utils/copyTextToClipboard';
+import selectTextFromNode from './utils/selectTextFromNode';
 
 type RootProps = {
   block?: boolean;
@@ -11,21 +14,20 @@ type RootProps = {
 
 const Root = styled.div<RootProps>`
   display: ${({ block }) => (block ? 'block' : 'inline')};
+  cursor: pointer;
 `;
 
-type Props = {
+export type Props = PropsWithChildren<{
   block?: boolean;
-};
-
-const defaultProps = {
-  block: false,
-};
+  id?: string;
+}>;
 
 /**
  * Copy to clipboard the value of the children. Children should be of type string.
  */
-export default function Copy({ children, block }: PropsWithChildren<Props>) {
-  const { t } = useTranslation('common', { keyPrefix: 'copy' });
+export default function Text({ children, block, id }: Props) {
+  const { t } = useTranslation('common', { keyPrefix: 'copyToClipboard' });
+  const rootRef = useRef<HTMLDivElement>(null);
   const [copyExecuted, setCopyExecuted] = useState(false);
   const [copySuccess, setCopySuccess] = useState<boolean | undefined>(undefined);
   const title = useMemo(() => {
@@ -39,6 +41,10 @@ export default function Copy({ children, block }: PropsWithChildren<Props>) {
 
     try {
       if (!copyExecuted) {
+        if (rootRef.current) {
+          selectTextFromNode(rootRef.current);
+        }
+
         copyTextToClipboard(children as string)
           .then(() => {
             setCopySuccess(true);
@@ -73,8 +79,11 @@ export default function Copy({ children, block }: PropsWithChildren<Props>) {
   return (
     <Tooltip title={title} placement='top'>
       <Root
+        ref={rootRef}
+        id={id}
         role='button'
         block={block}
+        data-test={`${id ?? 'root'}-ctc-text`}
         onClick={handleOnClick}
         onMouseOut={handleOnMouseOut}
         onBlur={handleOnMouseOut}
@@ -86,4 +95,12 @@ export default function Copy({ children, block }: PropsWithChildren<Props>) {
   );
 }
 
-Copy.defaultProps = defaultProps;
+Text.propTypes = {
+  block: PropTypes.bool,
+  id: PropTypes.string,
+};
+
+Text.defaultProps = {
+  block: false,
+  id: undefined,
+};

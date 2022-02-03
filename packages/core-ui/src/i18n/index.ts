@@ -1,6 +1,7 @@
 import { Logger } from '@gulab-client/logger';
 import i18next from 'i18next';
 import { initReactI18next, useTranslation } from 'react-i18next';
+import resources from './resources';
 
 /**
  *
@@ -27,7 +28,7 @@ export function initI18n() {
     // passes i18n down to react-i18next
     .use(initReactI18next)
     .init({
-      resources: {},
+      resources,
       lng: 'en',
       fallbackLng: 'en',
       interpolation: {

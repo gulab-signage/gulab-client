@@ -6,7 +6,9 @@ export default async function copyTextToClipboard(text: string) {
       return await navigator.clipboard.writeText(text);
     }
 
-    return document.execCommand('copy', true, text);
+    if (document.execCommand) {
+      return document.execCommand('copy', true, text);
+    }
   } catch (error) {
     Logger.logError(error as Error);
   }
