@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/gulab-signage/gulab-client/compare/@gulab-client/logger@1.1.0...@gulab-client/logger@1.1.1) (2022-02-03)
+
+**Note:** Version bump only for package @gulab-client/logger
+
+
+
+
+
+
 # 1.1.0 (2022-01-19)
 
 

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/gulab-signage/gulab-client/compare/@gulab-client/utils@1.2.1...@gulab-client/utils@1.3.0) (2022-02-03)
+
+
+### Features
+
+* add utility function for handling local storage ([b581c40](https://github.com/gulab-signage/gulab-client/commit/b581c403bc3971634b136fc5c00c681625b396df))
+
+
+
+
+
+
 ## [1.2.1](https://github.com/gulab-signage/gulab-client/compare/@gulab-client/utils@1.2.0...@gulab-client/utils@1.2.1) (2022-01-19)
 
 **Note:** Version bump only for package @gulab-client/utils
