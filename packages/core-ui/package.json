@@ -4,10 +4,16 @@
   "description": "Common UI components, styles and utilities",
   "author": "Mitko Miloshev <miloshev.mitko@gmail.com>",
   "repository": "https://github.com/gulab-signage/gulab-client.git",
-  "homepage": "https://github.com/gulab-signage/gulab-client/tree/main/packages/core-ui#readme",
   "license": "GPL-3.0-or-later",
   "private": true,
   "main": "src/index.ts",
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
   "peerDependencies": {
     "@emotion/css": "11.7.1",
     "@emotion/react": "11.7.1",
@@ -26,12 +32,17 @@
     "react-scripts": "5.0.0",
     "typescript": "4.5.4"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+  "dependencies": {
+    "@gulab-client/logger": "^1.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.16.12",
+    "@storybook/addon-actions": "6.4.15",
+    "@storybook/addon-docs": "6.4.15",
+    "@storybook/addon-essentials": "6.4.15",
+    "@storybook/addon-links": "6.4.15",
+    "@storybook/react": "6.4.15",
+    "babel-loader": "8.2.3"
   },
   "browserslist": {
     "production": [
@@ -44,17 +55,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "dependencies": {
-    "@gulab-client/logger": "^1.1.1"
-  },
-  "devDependencies": {
-    "@babel/core": "7.16.12",
-    "@storybook/addon-actions": "6.4.15",
-    "@storybook/addon-docs": "6.4.15",
-    "@storybook/addon-essentials": "6.4.15",
-    "@storybook/addon-links": "6.4.15",
-    "@storybook/react": "6.4.15",
-    "babel-loader": "8.2.3"
   }
 }
