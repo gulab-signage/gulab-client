@@ -1,45 +1,45 @@
 import { Logger } from '@gulab-client/logger';
+import type { Callback } from 'i18next';
 import i18next from 'i18next';
 import { initReactI18next, useTranslation } from 'react-i18next';
 import resources from './resources';
 
 /**
- *
- * ### Using the hook
- * import { useTranslation } from 'react-i18next';\
+ * #### Using the hook
  * import { useTranslation } from '@gulab-client/core-ui';\
- * const { t, i18n } = useTranslation();
+ * const { t, i18n } = useTranslation(namespace, { keyPrefix });
  *
- * ### Using outside of React
- * import i18next from 'i18next';\
- * import i18next from '@gulab-client/core-ui';\
- * i18next.t('my.key');
+ * #### Using outside of React
+ * import i18nInstance from '@gulab-client/core-ui';\
+ * i18nInstance.t(key, { ns });
  *
- * ### Addint resources
- * i18next.addResourceBundle('en', 'namespace1', { key: 'hello' });
- *
- * ### Using namespaces and prefix
- * const { t } = useTranslation('namespace1', { keyPrefix: 'copy' });\
- * i18next.t('look.deep', { ns: 'namespace1' });
+ * #### Adding resources
+ * i18nInstance.addResourceBundle(lang, namespace, resources);
  */
 
-export function initI18n() {
-  i18next
+const i18nInstance = i18next.createInstance();
+
+function initI18n(callback?: Callback) {
+  i18nInstance
     // passes i18n down to react-i18next
     .use(initReactI18next)
-    .init({
-      resources,
-      lng: 'en',
-      fallbackLng: 'en',
-      interpolation: {
-        // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
-        escapeValue: false,
+    .init(
+      {
+        defaultNS: 'common',
+        fallbackLng: ['en'],
+        interpolation: {
+          // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
+          escapeValue: false,
+        },
+        lng: 'en',
+        resources,
       },
-    })
+      callback
+    )
     .catch((error) => {
       // TODO: Fix logger
       Logger.logError(error as Error);
     });
 }
 
-export { i18next, useTranslation };
+export { i18nInstance, initI18n, useTranslation };
