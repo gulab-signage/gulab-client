@@ -1,6 +1,7 @@
 import { Logger } from '@gulab-client/logger';
 import type { Callback } from 'i18next';
 import i18next from 'i18next';
+import type { TFunction, UseTranslationOptions } from 'react-i18next';
 import { initReactI18next, useTranslation } from 'react-i18next';
 import resources from './resources';
 
@@ -43,3 +44,4 @@ function initI18n(callback?: Callback) {
 }
 
 export { i18nInstance, initI18n, useTranslation };
+export type { UseTranslationOptions, TFunction };
