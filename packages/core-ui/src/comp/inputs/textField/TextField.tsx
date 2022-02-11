@@ -1,17 +1,22 @@
+import styled from '@emotion/styled';
 import type { TextFieldProps } from '@mui/material';
 import MuiInputLabel from '@mui/material/InputLabel';
-import { styled } from '@mui/material/styles';
+import { styled as muiStyled } from '@mui/material/styles';
 import MuiTextField from '@mui/material/TextField';
 import React from 'react';
 
 export type { TextFieldProps as Props };
 
-const CustomizedInputLabel = styled(MuiInputLabel)`
+const Root = styled.div`
+  margin-top: ${({ theme }) => theme.spacing(1)};
+`;
+
+const CustomizedInputLabel = muiStyled(MuiInputLabel)`
   margin-left: ${({ theme }) => theme.spacing(1)};
   font-weight: 600;
 `;
 
-const CustomizedTextField = styled(MuiTextField)`
+const CustomizedTextField = muiStyled(MuiTextField)`
   & .MuiFormHelperText-root {
     margin-left: ${({ theme }) => theme.spacing(1)};
   }
@@ -30,7 +35,7 @@ export default function TextField({
   const labelId = id ? `${id}-label` : undefined;
   const labelTestId = labelId ?? 'text-field-label';
   return (
-    <div>
+    <Root>
       {label && (
         <CustomizedInputLabel
           disabled={disabled}
@@ -55,6 +60,6 @@ export default function TextField({
         }}
         {...otherProps}
       />
-    </div>
+    </Root>
   );
 }
