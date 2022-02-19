@@ -1,10 +1,11 @@
 import type { TypographyOptions } from '@mui/material/styles/createTypography';
 
 const typography: TypographyOptions = {
-  htmlFontSize: 10,
   button: {
     textTransform: 'none',
   },
+  fontFamily: "'Rubik', sans-serif",
+  htmlFontSize: 10,
 };
 
 export default typography;

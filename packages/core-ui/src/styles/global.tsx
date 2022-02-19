@@ -4,6 +4,7 @@ import React from 'react';
 const globalStyles = css`
   html {
     font-size: 62.5%;
+    font-family: 'Rubik', sans-serif;
 
     body {
       margin: 0;

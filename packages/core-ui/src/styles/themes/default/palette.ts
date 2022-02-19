@@ -7,14 +7,14 @@ const palette: PaletteOptions = {
     white: '#FFFFFF',
   },
   primary: {
-    light: '#E2E1F5',
-    main: '#4840BB',
-    dark: '#231F5B',
+    light: '#BBB8F4',
+    main: '#6159E6',
+    dark: '#221BB1',
   },
   secondary: {
-    light: '#E8D9DD',
-    main: '#975D6E',
-    dark: '#3F272E',
+    light: '#E5FEC3',
+    main: '#AFFC41',
+    dark: '#76C903',
   },
   error: {
     light: '#F5CDCC',
@@ -22,14 +22,14 @@ const palette: PaletteOptions = {
     dark: '#661614',
   },
   warning: {
-    light: '#FBE3C5',
-    main: '#D17B0F',
-    dark: '#4C2C05',
+    light: '#FCE1C5',
+    main: '#F58F29',
+    dark: '#884707',
   },
   info: {
-    light: '#DEEEF7',
-    main: '#449DD1',
-    dark: '#1C5373',
+    light: '#C2F0FF',
+    main: '#00BBF9',
+    dark: '#003D52',
   },
   success: {
     light: '#A2EA9A',
