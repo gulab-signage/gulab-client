@@ -1,0 +1,43 @@
+{
+  "common": {
+    "content": {
+      "title": "Welcome to"
+    },
+    "password": {
+      "label": "Password",
+      "placeholder": "Enter your password"
+    },
+    "username": {
+      "label": "Username",
+      "placeholder": "john.doe@gulab.com"
+    }
+  },
+  "footer": {
+    "about": "About",
+    "help": "Help",
+    "more": "More",
+    "terms": "Terms"
+  },
+  "login": {
+    "button": {
+      "label": "Login"
+    },
+    "content": {
+      "caption": "Login with your email to get started."
+    },
+    "forgotPassword": "Forgot password?",
+    "notRegistered": "Don't have an account?",
+    "registerNow": "Register Now"
+  },
+  "register": {
+    "agreeToTerms": "By signing up you agree to our <aTerms>Terms</aTerms>, <aData>Data Policy</aData> and <aCookies>Cookies Policy</aCookies>.",
+    "alreadyRegistered": "Have an account?",
+    "button": {
+      "label": "Create Account"
+    },
+    "content": {
+      "caption": "Register now to get access to all the features."
+    },
+    "loginNow": "Login Now"
+  }
+}
