@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/gulab-signage/gulab-client/compare/@gulab-client/core-ui@1.1.0...@gulab-client/core-ui@1.2.0) (2022-02-20)
+
+
+### Features
+
+* create seamless transition component ([b969129](https://github.com/gulab-signage/gulab-client/commit/b9691297cbe6f005184ce7a0609650ae7d4b0c43))
+* **style:** update color palette and font family ([4501832](https://github.com/gulab-signage/gulab-client/commit/45018324fc3a6bfe065ee299cb98248eaa044774))
+* **style:** update palette colors ([667bb30](https://github.com/gulab-signage/gulab-client/commit/667bb30b7b475514d9fffadd5db023f1ab0e71b1))
+* **style:** update TextField styles ([c2b0db8](https://github.com/gulab-signage/gulab-client/commit/c2b0db8ea864944205cf57e86100f98540afe139))
+
+
+
+
+
+
 # 1.1.0 (2022-02-03)
 
 ### Features
