@@ -7,23 +7,20 @@ import Typography from '@mui/material/Typography';
 import { ReactComponent as LogoB16 } from 'assets/logo.svg';
 import React from 'react';
 
-// TODO: margin: 0 ${({ theme }) => theme.spacing(2)};
 // TODO: whitelabel.logoDefault
 const Logo = styled(LogoB16)`
   height: 72px;
-  margin: 0 16px;
+  margin: 0 ${({ theme }) => theme.spacing(2)};
   vertical-align: middle;
   path {
     stroke: black !important;
   }
 `;
 
-// TODO: margin-bottom: ${({ theme }) => theme.spacing(2)};
-// TODO: color: ${({ theme }) => theme.palette.text.secondary};
 const Title = styled(Typography)`
-  margin-bottom: 16px;
+  margin-bottom: ${({ theme }) => theme.spacing(2)};
   font-size: 1.6rem;
-  color: rgba(0, 0, 0, 0.6);
+  color: ${({ theme }) => theme.palette.text.secondary};
   text-transform: uppercase;
 `;
 

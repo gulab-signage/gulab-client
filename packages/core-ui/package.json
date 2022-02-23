@@ -7,9 +7,11 @@
   "license": "GPL-3.0-or-later",
   "private": true,
   "main": "src/index.ts",
+  "types": "build/types/index.d.ts",
   "scripts": {
     "start": "craco start",
-    "build": "craco build",
+    "build": "craco build & yarn build:types",
+    "build:types": "tsc",
     "test": "craco test",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"

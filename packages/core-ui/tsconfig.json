@@ -1,7 +1,13 @@
 {
   "extends": "../../tsconfig",
   "compilerOptions": {
-    "baseUrl": "./src"
+    "baseUrl": "./src",
+    "declarationDir": "./build/types", // required for build:types
+    "noEmit": false, // required for build:types
+    "isolatedModules": false, // required for build:types
+    "paths": {
+      "@gulab-client/core-ui": ["./index.ts"] // required for build:types
+    }
   },
   "include": [
     "src"
