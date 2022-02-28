@@ -35,7 +35,8 @@
     "typescript": "4.5.4"
   },
   "dependencies": {
-    "@gulab-client/logger": "^1.1.1"
+    "@gulab-client/logger": "^1.1.1",
+    "@gulab-client/utils": "*"
   },
   "devDependencies": {
     "@babel/core": "7.16.12",
