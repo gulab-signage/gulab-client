@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig",
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@gulab-client/models/statuses/*": ["statuses/*"]
+    }
+  },
+  "include": [
+    "src"
+  ]
+}
