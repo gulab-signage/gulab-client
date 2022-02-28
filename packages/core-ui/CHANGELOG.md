@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/gulab-signage/gulab-client/compare/@gulab-client/core-ui@1.2.1...@gulab-client/core-ui@1.3.0) (2022-02-28)
+
+
+### Features
+
+* added Breadcrumbs component ([99e4da9](https://github.com/gulab-signage/gulab-client/commit/99e4da995ef06b698bb43e6b7ec03bec7fad807b))
+
+
+
+
+
 ## [1.2.1](https://github.com/gulab-signage/gulab-client/compare/@gulab-client/core-ui@1.2.0...@gulab-client/core-ui@1.2.1) (2022-02-23)
 
 
