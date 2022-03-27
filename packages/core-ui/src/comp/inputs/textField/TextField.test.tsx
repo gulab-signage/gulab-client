@@ -1,3 +1,4 @@
+import { GlobalStyles, ThemeProvider } from '@gulab-client/core-ui';
 import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
@@ -29,7 +30,13 @@ describe('Test TextField component', () => {
     };
 
     act(() => {
-      render(<TextField {...props} />, container);
+      render(
+        <ThemeProvider>
+          <GlobalStyles />
+          <TextField {...props} />
+        </ThemeProvider>,
+        container
+      );
     });
 
     expect(container).not.toBeNull();
@@ -67,7 +74,13 @@ describe('Test TextField component', () => {
     };
 
     act(() => {
-      render(<TextField {...props} />, container);
+      render(
+        <ThemeProvider>
+          <GlobalStyles />
+          <TextField {...props} />
+        </ThemeProvider>,
+        container
+      );
     });
 
     expect(container).not.toBeNull();

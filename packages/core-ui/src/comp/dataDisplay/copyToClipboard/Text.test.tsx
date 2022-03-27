@@ -3,6 +3,12 @@ import { render, unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import Text from './Text';
 
+Object.assign(navigator, {
+  clipboard: {
+    writeText: jest.fn().mockImplementation(() => Promise.resolve()),
+  },
+});
+
 let container: Element | null = null;
 describe('Test Copt to Clipboard Text component', () => {
   beforeEach(() => {
