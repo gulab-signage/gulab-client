@@ -36,6 +36,9 @@ const palette: PaletteOptions = {
     main: '#2B9720',
     dark: '#14430F',
   },
+  text: {
+    secondary: '#637381',
+  },
   background: {
     default: '#F0F2F5',
   },

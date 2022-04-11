@@ -1,7 +1,10 @@
+export { LogoBlack } from './assets';
 export { CTCText } from './comp/dataDisplay/copyToClipboard';
 export type { CTCTextProps } from './comp/dataDisplay/copyToClipboard';
 export { TextField } from './comp/inputs/textField';
 export type { TextFieldProps } from './comp/inputs/textField';
+export { SidebarContext, SidebarControl, SidebarProvider } from './comp/layout/sidebar';
+export type { SidebarProps } from './comp/layout/sidebar';
 export { Breadcrumbs } from './comp/routes/breadcrumbs';
 export type { BreadcrumbsProps } from './comp/routes/breadcrumbs';
 export { ScrollToTop } from './comp/routes/scrollToTop';

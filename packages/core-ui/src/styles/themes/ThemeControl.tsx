@@ -1,6 +1,6 @@
 import DarkModeSharp from '@mui/icons-material/DarkModeSharp';
 import IconButton from '@mui/material/IconButton';
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useCallback, useContext, useEffect, useState } from 'react';
 import themeDark from './dark';
 import themeDefault from './default';
 import ThemeContext from './ThemeContext';
@@ -19,9 +19,9 @@ export default function ThemeControl() {
     }
   }, [isDark, setTheme]);
 
-  function handleOnClick() {
+  const handleOnClick = useCallback(() => {
     setIsDark((currIsDark) => !currIsDark);
-  }
+  }, []);
 
   return (
     <IconButton onClick={handleOnClick}>

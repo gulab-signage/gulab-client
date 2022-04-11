@@ -4,6 +4,15 @@
       "default": "Click to copy \"{{value}}\".",
       "error": "Sorry, there was an error.",
       "success": "Copied!"
+    },
+    "sidebar": {
+      "bottomBar": {
+        "tooltips": {
+          "language": "Language",
+          "logout": "Logout",
+          "notifications": "Notifications"
+        }
+      }
     }
   }
 }

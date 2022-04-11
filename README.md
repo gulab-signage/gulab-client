@@ -102,7 +102,7 @@ Whitelabel system
 
 Test of CTC Text not ok
 
-After we create an app we should we should create and test a web component.
+After we create an app we should create and test a web component.
 
 // TODO: cross-env NODE_ENV=production yarn webpack <br />
 Versioning should be done in CI environment.
@@ -110,3 +110,9 @@ Versioning should be done in CI environment.
 // TODO:
 Check does ESLint errors interupt the build?
 Check does ESLint errors prevent git push?
+
+// TODO: Update guidelines for the type of language codes we use
+https://www.fincher.org/Utilities/CountryLanguageList.shtml
+Languages are not required to be in translations
+
+// TODO: Menu items in sidebar should be selected based on the current route/path
