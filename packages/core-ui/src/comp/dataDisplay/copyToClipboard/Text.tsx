@@ -4,7 +4,7 @@ import { Logger } from '@gulab-client/logger';
 import Tooltip from '@mui/material/Tooltip';
 import PropTypes from 'prop-types';
 import type { PropsWithChildren } from 'react';
-import React, { useMemo, useRef, useState } from 'react';
+import React, { useCallback, useMemo, useRef, useState } from 'react';
 import copyTextToClipboard from './utils/copyTextToClipboard';
 import selectTextFromNode from './utils/selectTextFromNode';
 
@@ -36,45 +36,51 @@ export default function Text({ children, block, id }: Props) {
     return t('default', { value: children });
   }, [children, copySuccess, t]);
 
-  function handleOnClick(e: React.BaseSyntheticEvent) {
-    e.preventDefault();
+  const handleOnClick = useCallback(
+    (e: React.BaseSyntheticEvent) => {
+      e.preventDefault();
 
-    try {
-      if (!copyExecuted) {
-        if (rootRef.current) {
-          selectTextFromNode(rootRef.current);
+      try {
+        if (!copyExecuted) {
+          if (rootRef.current) {
+            selectTextFromNode(rootRef.current);
+          }
+
+          copyTextToClipboard(children as string)
+            .then(() => {
+              setCopySuccess(true);
+            })
+            .catch(() => {
+              setCopySuccess(false);
+            });
         }
-
-        copyTextToClipboard(children as string)
-          .then(() => {
-            setCopySuccess(true);
-          })
-          .catch(() => {
-            setCopySuccess(false);
-          });
+      } catch (error) {
+        Logger.logError(error as Error);
+        setCopySuccess(false);
+      } finally {
+        setCopyExecuted(true);
       }
-    } catch (error) {
-      Logger.logError(error as Error);
-      setCopySuccess(false);
-    } finally {
-      setCopyExecuted(true);
-    }
-  }
+    },
+    [children, copyExecuted]
+  );
 
-  function handleOnPressEnter(e: React.KeyboardEvent<HTMLDivElement>) {
-    if (e.key === 'Enter') {
-      handleOnClick(e);
-    }
-  }
+  const handleOnPressEnter = useCallback(
+    (e: React.KeyboardEvent<HTMLDivElement>) => {
+      if (e.key === 'Enter') {
+        handleOnClick(e);
+      }
+    },
+    [handleOnClick]
+  );
 
-  function handleOnMouseOut() {
+  const handleOnMouseOut = useCallback(() => {
     if (copyExecuted) {
       setTimeout(() => {
         setCopyExecuted(false);
         setCopySuccess(undefined);
       }, 200);
     }
-  }
+  }, [copyExecuted]);
 
   return (
     <Tooltip title={title} placement='top'>

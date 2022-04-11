@@ -9,7 +9,7 @@ import { ReactComponent as LoginIllustration } from 'assets/login_illustration.s
 import Header from 'comps/Header';
 import Links from 'comps/Links';
 import SubmitButtonForwardRef from 'comps/SubmitButton';
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
 const Illustration = styled(LoginIllustration)``;
 
@@ -35,21 +35,21 @@ export default function Login() {
     };
   }, []);
 
-  function handleOnChangeUsername(event: React.ChangeEvent<HTMLInputElement>) {
+  const handleOnChangeUsername = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
     setUsername(event.currentTarget.value);
-  }
+  }, []);
 
-  function handleOnChangePassword(event: React.ChangeEvent<HTMLInputElement>) {
+  const handleOnChangePassword = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(event.currentTarget.value);
-  }
+  }, []);
 
-  function handleOnClickLogin() {
+  const handleOnClickLogin = useCallback(() => {
     console.warn(username, password);
-  }
+  }, [password, username]);
 
-  function handleOnClickRegister() {
+  const handleOnClickRegister = useCallback(() => {
     console.warn(username, password);
-  }
+  }, [password, username]);
 
   return (
     <Card variant='outlined' sx={{ display: 'flex', width: { xs: '100%', sm: 'initial' }, borderRadius: 4 }}>

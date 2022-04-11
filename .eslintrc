@@ -37,7 +37,6 @@
     // note you must disable the base rule as it can report incorrect errors
     // we are using @typescript-eslint/no-use-before-define
     "no-use-before-define": "off",
-    "react/jsx-no-bind": ["error", { "allowFunctions": true }],
     // when extending components from mui it's simpler to pass all props with spread
     "react/jsx-props-no-spreading": "off"
   }

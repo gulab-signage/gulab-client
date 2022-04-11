@@ -1,5 +1,5 @@
 import Grow from '@mui/material/Grow';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 export enum SeamlessTransitionComp {
   First = 'fst',
@@ -30,10 +30,10 @@ export default function SeamlessTransition({ transitionIndicator, firstComp, sec
     setTransitionIn(false);
   }, [transitionIndicator]);
 
-  function handleOnExit(el: HTMLElement) {
+  const handleOnExit = useCallback((el: HTMLElement) => {
     setRenderFirstComp(SeamlessTransitionComp.First !== el.dataset.st);
     setTransitionIn(true);
-  }
+  }, []);
 
   return (
     <Grow in={transitionIn} onExit={handleOnExit}>
