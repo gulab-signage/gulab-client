@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/gulab-signage/gulab-client/compare/@gulab-client/pages-login@1.1.2...@gulab-client/pages-login@1.2.0) (2022-04-11)
+
+
+### Features
+
+* update components to fully support jsx-no-bind lint rule ([a4783d2](https://github.com/gulab-signage/gulab-client/commit/a4783d258ac629371f2c183e396e0cafa1d01471))
+
+
+
+
+
 ## [1.1.2](https://github.com/gulab-signage/gulab-client/compare/@gulab-client/pages-login@1.1.1...@gulab-client/pages-login@1.1.2) (2022-02-28)
 
 **Note:** Version bump only for package @gulab-client/pages-login

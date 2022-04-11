@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/gulab-signage/gulab-client/compare/@gulab-client/core-ui@1.3.0...@gulab-client/core-ui@1.4.0) (2022-04-11)
+
+
+### Features
+
+* add scroll to top component ([ff23bd5](https://github.com/gulab-signage/gulab-client/commit/ff23bd5b9b4e66883d14dd133f2f89aeb45ba29b))
+* create sidebar component ([3450100](https://github.com/gulab-signage/gulab-client/commit/34501001adf86341909432ef438f4c365623ca73))
+* update components to fully support jsx-no-bind lint rule ([a4783d2](https://github.com/gulab-signage/gulab-client/commit/a4783d258ac629371f2c183e396e0cafa1d01471))
+* update storybook config to support loading svg ([049ef3f](https://github.com/gulab-signage/gulab-client/commit/049ef3fd9c9b9eda2fdb1aec06aaa3243a85456c))
+
+
+
+
+
 # [1.3.0](https://github.com/gulab-signage/gulab-client/compare/@gulab-client/core-ui@1.2.1...@gulab-client/core-ui@1.3.0) (2022-02-28)
 
 

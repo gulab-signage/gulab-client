@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.2](https://github.com/gulab-signage/gulab-client/compare/@gulab-client/utils@1.3.1...@gulab-client/utils@1.3.2) (2022-04-11)
+
+**Note:** Version bump only for package @gulab-client/utils
+
+
+
+
+
 ## [1.3.1](https://github.com/gulab-signage/gulab-client/compare/@gulab-client/utils@1.3.0...@gulab-client/utils@1.3.1) (2022-02-28)
 
 **Note:** Version bump only for package @gulab-client/utils
