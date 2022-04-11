@@ -18,6 +18,14 @@ module.exports = {
       delete config.resolve.alias['@emotion/core'];
     }
 
+    // Fix for loading SVGs as React Components in Storybook
+    const fileLoaderRule = config.module.rules.find((rule) => rule.test.test('.svg'));
+    fileLoaderRule.exclude = /\.svg$/;
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack', 'url-loader'],
+    });
+
     return config;
   },
 };
